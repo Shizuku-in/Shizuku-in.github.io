@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>reset</title>
+    <link href="/2024/11/06/reset/"/>
+    <url>/2024/11/06/reset/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">convert_images_to_jpeg</span>(<span class="hljs-params">directory, quality=<span class="hljs-number">90</span>, subsampling=<span class="hljs-number">0</span>, scale_factor=<span class="hljs-number">0.8</span></span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(directory):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;&#x27;<span class="hljs-subst">&#123;directory&#125;</span>&#x27; 不存在&quot;</span>)<br>        <span class="hljs-keyword">return</span><br>    convert_dir = os.path.join(directory, <span class="hljs-string">&#x27;convert&#x27;</span>)<br>    os.makedirs(convert_dir, exist_ok=<span class="hljs-literal">True</span>)<br><br>    <span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> os.listdir(directory):<br>        file_path = os.path.join(directory, filename)<br>        <br>        <span class="hljs-keyword">if</span> os.path.isfile(file_path) <span class="hljs-keyword">and</span> filename.lower().endswith((<span class="hljs-string">&#x27;png&#x27;</span>, <span class="hljs-string">&#x27;jpg&#x27;</span>, <span class="hljs-string">&#x27;jpeg&#x27;</span>, <span class="hljs-string">&#x27;bmp&#x27;</span>, <span class="hljs-string">&#x27;gif&#x27;</span>, <span class="hljs-string">&#x27;tiff&#x27;</span>)):<br>            <span class="hljs-keyword">with</span> Image.<span class="hljs-built_in">open</span>(file_path) <span class="hljs-keyword">as</span> img:<br>                new_size = (<span class="hljs-built_in">int</span>(img.width * scale_factor), <span class="hljs-built_in">int</span>(img.height * scale_factor))<br>                img = img.resize(new_size, Image.LANCZOS)<br>                img = img.convert(<span class="hljs-string">&#x27;RGB&#x27;</span>)<br>                new_filename = os.path.splitext(filename)[<span class="hljs-number">0</span>] + <span class="hljs-string">&#x27;.jpg&#x27;</span><br>                new_file_path = os.path.join(convert_dir, new_filename)<br>                img.save(new_file_path, <span class="hljs-string">&#x27;JPEG&#x27;</span>, quality=quality, optimize=<span class="hljs-literal">True</span>, subsampling=subsampling, progressive=<span class="hljs-literal">True</span>)<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;已转换：<span class="hljs-subst">&#123;new_file_path&#125;</span>&quot;</span>)<br>    <br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;已转换&quot;</span>)<br><br>user_directory = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;路径：&quot;</span>)<br>convert_images_to_jpeg(user_directory, quality=<span class="hljs-number">90</span>, subsampling=<span class="hljs-number">0</span>, scale_factor=<span class="hljs-number">0.7</span>)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Fluid</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2024/11/06/Hello-World/"/>
     <url>/2024/11/06/Hello-World/</url>
