@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Shizuku-in/storage/refs/heads/main/posts/2015/03/27/ele-a017-Cover.jpg">
 <meta property="article:published_time" content="2024-11-05T16:52:24.000Z">
-<meta property="article:modified_time" content="2024-11-05T17:02:23.452Z">
+<meta property="article:modified_time" content="2024-11-06T15:40:26.442Z">
 <meta property="article:author" content="gkouen">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Fluid">
@@ -90,7 +90,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -228,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          163 字
+          176 字
         
       </span>
     
@@ -291,9 +295,19 @@
               <div class="markdown-body">
                 
                 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">convert_images_to_jpeg</span>(<span class="hljs-params">directory, quality=<span class="hljs-number">90</span>, subsampling=<span class="hljs-number">0</span>, scale_factor=<span class="hljs-number">0.8</span></span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(directory):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;&#x27;<span class="hljs-subst">&#123;directory&#125;</span>&#x27; 不存在&quot;</span>)<br>        <span class="hljs-keyword">return</span><br>    convert_dir = os.path.join(directory, <span class="hljs-string">&#x27;convert&#x27;</span>)<br>    os.makedirs(convert_dir, exist_ok=<span class="hljs-literal">True</span>)<br><br>    <span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> os.listdir(directory):<br>        file_path = os.path.join(directory, filename)<br>        <br>        <span class="hljs-keyword">if</span> os.path.isfile(file_path) <span class="hljs-keyword">and</span> filename.lower().endswith((<span class="hljs-string">&#x27;png&#x27;</span>, <span class="hljs-string">&#x27;jpg&#x27;</span>, <span class="hljs-string">&#x27;jpeg&#x27;</span>, <span class="hljs-string">&#x27;bmp&#x27;</span>, <span class="hljs-string">&#x27;gif&#x27;</span>, <span class="hljs-string">&#x27;tiff&#x27;</span>)):<br>            <span class="hljs-keyword">with</span> Image.<span class="hljs-built_in">open</span>(file_path) <span class="hljs-keyword">as</span> img:<br>                new_size = (<span class="hljs-built_in">int</span>(img.width * scale_factor), <span class="hljs-built_in">int</span>(img.height * scale_factor))<br>                img = img.resize(new_size, Image.LANCZOS)<br>                img = img.convert(<span class="hljs-string">&#x27;RGB&#x27;</span>)<br>                new_filename = os.path.splitext(filename)[<span class="hljs-number">0</span>] + <span class="hljs-string">&#x27;.jpg&#x27;</span><br>                new_file_path = os.path.join(convert_dir, new_filename)<br>                img.save(new_file_path, <span class="hljs-string">&#x27;JPEG&#x27;</span>, quality=quality, optimize=<span class="hljs-literal">True</span>, subsampling=subsampling, progressive=<span class="hljs-literal">True</span>)<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;已转换：<span class="hljs-subst">&#123;new_file_path&#125;</span>&quot;</span>)<br>    <br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;已转换&quot;</span>)<br><br>user_directory = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;路径：&quot;</span>)<br>convert_images_to_jpeg(user_directory, quality=<span class="hljs-number">90</span>, subsampling=<span class="hljs-number">0</span>, scale_factor=<span class="hljs-number">0.7</span>)<br></code></pre></td></tr></table></figure>
-
-<p>$$<br>\int_{a}^{b} x^2 ,dx<br>$$</p>
-
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><msup><mi>x</mi><mn>2</mn></msup><mtext> </mtext><mi>d</mi><mi>x</mi><mi>c</mi><mo>=</mo><mo>±</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\int_{a}^{b} x^2 \,dx
+c = \pm\sqrt{a^2 + b^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3998em;vertical-align:-0.3558em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0006em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.044em;"><span style="top:-2.3442em;margin-left:-0.1945em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.2579em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3558em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1266em;"></span><span class="mord">±</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9134em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.8734em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1266em;"><span></span></span></span></span></span></span></span></span>
                 
               </div>
             
@@ -426,12 +440,6 @@
 
 
   
-
-
-  
-  
-
-
 
 
 
@@ -650,49 +658,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
