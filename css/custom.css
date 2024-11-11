@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'SourceHanSerifSC';
-    src: url('../fonts/SourceHanSerifSC-Medium-subset.otf') format('opentype');
+    src: url('../fonts/SourceHanSerifSC-Medium-subset.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: fallback;
