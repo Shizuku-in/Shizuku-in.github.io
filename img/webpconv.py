@@ -16,7 +16,7 @@ def main(directory):
                 webp.save_image(im, webp_path, quality=70) # quality
                 print(f"{filename} -> {webp_path}")
             except Exception as e:
-                print(f"Error happened when process {filename}: {e}")
+                print(f"Error happened when processing {filename}: {e}")
 
 if __name__ == "__main__":
     directory = input("Directory: ")
