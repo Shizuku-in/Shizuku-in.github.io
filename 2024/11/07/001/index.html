@@ -469,10 +469,10 @@
   <div id="waline"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://registry.npmmirror.com/@waline/client/3.4.1/files/dist/waline.css')
-      Fluid.utils.createScript('https://registry.npmmirror.com/@waline/client/3.4.1/files/dist/waline.js', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/valine/3.4.1/waline.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/3.4.1/waline.js', function() {
         var options = Object.assign(
-          {"serverURL":"https://waline.cya.moe","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {"serverURL":"https://waline.cya.moe","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":[],"lang":"zh","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10,"copyright":true},
           {
             el: '#waline',
             path: window.location.pathname
