@@ -1,1 +1,1 @@
-@font-face{font-family:SourceHanSerifSC;src:url('../fonts/SourceHanSerifSC-Medium-subset.woff2') format('woff2');font-weight:500;font-style:normal;font-display:fallback}body{font-family:SourceHanSerifSC,SimSun,serif}#board{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+@font-face{font-family:SourceHanSerifSC;src:url('../fonts/SourceHanSerifSC-Medium-subset.woff2') format('woff2');font-weight:500;font-style:normal;font-display:fallback}#board{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}body{font-family:SourceHanSerifSC,SimSun,serif}
