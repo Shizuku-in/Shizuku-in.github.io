@@ -1,0 +1,60 @@
+body {
+    cursor: url( ), auto;
+}
+/*a标签*/
+a:hover {
+    cursor: url( ), auto;
+}
+/*按钮*/
+button:hover {
+    cursor: url( ), auto;
+}
+/*文字*/
+code:hover{
+	cursor: url( ), auto;
+}
+#rightside>div>button,
+#rightside>div>a {
+    display: block;
+    margin-bottom: 2px;
+    width: 30px;
+    height: 30px;
+    color: var(--btn-color);
+    text-align: center;
+    font-size: 16px;
+    cursor: url( ), auto;
+}
+/* 文章标签 */
+.layout_post .tag_share .post-meta__tags {
+    cursor: url( ), auto;
+}
+/* 评论区 */
+.vcol * {
+    cursor: url( ), auto;
+}
+.v[data-class=v] .vicon {
+    cursor: url( ), auto;
+}
+.v[data-class=v] .vbtn {
+    cursor: url( ), auto;
+}
+/* 回复 */
+.vat {
+    cursor: url( ), auto;
+}
+/*i标签*/
+i:hover {
+    cursor: url( ), auto;
+}
+/*up酱*/
+#upj:hover {
+    cursor: url( ), auto;
+}
+/*分页器*/
+#pagination .page-number:hover {
+    cursor: url( ), auto;
+}
+/* 分页器的三个点(...) */
+.space {
+    color: #00c4b6;
+}
