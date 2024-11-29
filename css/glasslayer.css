@@ -1,1 +1,1 @@
-#board{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#board{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}#web_bg{background-image:var(--desktop-bg-image-normal);position:fixed;width:100%;height:100%;z-index:-1;background-size:cover;transition:all .5s}
