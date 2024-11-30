@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const t=t=>{t.addEventListener("load",()=>{if(t.getAttribute("data-src")&&t.src===""){t.src=t.getAttribute("data-src")}t.classList.add("loaded")});if(t.complete){t.dispatchEvent(new Event("load"))}};const e=document.querySelectorAll(".post-content img, .container img");e.forEach(t)});
