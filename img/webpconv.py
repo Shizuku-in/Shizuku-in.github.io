@@ -13,7 +13,7 @@ def main(dir):
             try:
                 im = Image.open(file_path)
                 webp_path = os.path.splitext(file_path)[0] + '.webp'
-                webp.save_image(im, webp_path, quality=90)  # quality
+                webp.save_image(im, webp_path, quality=80)  # quality
                 print(f"{filename} -> {webp_path}")
             except Exception as e:
                 print(f"Error happened when processing {filename}: {e}")
