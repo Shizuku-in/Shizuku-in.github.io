@@ -1,1 +1,1 @@
-.index-card{transition:all .5s;transform:scale(calc(1.5 - .5 * var(--state)));opacity:var(--state);margin-bottom:2rem}.index-img img{margin:20px 0}
+.index-card{transition:all .5s;transform:scale(calc(1.5 - .5 * var(--state)));opacity:var(--state);margin-bottom:2rem}.index-img img{margin:20px 0}.index-img{transition:.4s}.index-card:hover .index-img{transform:scale(1.05)}
