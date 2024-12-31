@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2024/12/30/Untitled-1/"/>
-    <url>/2024/12/30/Untitled-1/</url>
-    
-    <content type="html"><![CDATA[<!DOCTYPE html><html lang="ja"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Tablesort 日文排序 - 所有表格</title>    <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>    <style>        table {            border-collapse: collapse;            width: 50%;            margin: 20px auto;            text-align: left;        }        th, td {            border: 1px solid #ccc;            padding: 8px;        }        th {            cursor: pointer;            background-color: #f2f2f2;        }    </style></head><body>    <table>        <thead>            <tr>                <th>名称</th>                <th>值</th>            </tr>        </thead>        <tbody>            <tr>                <td>あいうえお</td>                <td>100</td>            </tr>            <tr>                <td>かきくけこ</td>                <td>400</td>            </tr>            <tr>                <td>アイウエオ</td>                <td>200</td>            </tr>            <tr>                <td>漢字</td>                <td>300</td>            </tr>        </tbody>    </table>    <table>        <thead>            <tr>                <th>項目</th>                <th>數值</th>            </tr>        </thead>        <tbody>            <tr>                <td>東京</td>                <td>500</td>            </tr>            <tr>                <td>京都</td>                <td>200</td>            </tr>            <tr>                <td>大阪</td>                <td>300</td>            </tr>            <tr>                <td>福岡</td>                <td>100</td>            </tr>        </tbody>    </table>    <script>        // 定义一个 `Intl.Collator` 实例，指定日语区域设置        const collator = new Intl.Collator('ja', { sensitivity: 'base' });        // 扩展 Tablesort，支持日文排序        Tablesort.extend('japanese', function(item) {            // 检查是否包含日文字符            return /[\u3040-\u30FF\u4E00-\u9FFF]/.test(item);        }, function(a, b) {            // 使用 collator 进行日文排序            return collator.compare(a, b);        });        // 获取页面上的所有表格        const tables = document.querySelectorAll('table');        // 遍历每个表格，启用 Tablesort        tables.forEach(table => {            new Tablesort(table);        });    </script></body></html>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>关于 Fluid 主题做的一点美化</title>
     <link href="/2024/12/01/002/"/>
     <url>/2024/12/01/002/</url>
